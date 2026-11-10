@@ -1,0 +1,558 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Calvin Klein Free </title>
+  <!-- Google Serif & Sans Fonts matching the reference website -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;0,800;1,400&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="hehe.css">
+  
+</head>
+<body>
+
+  <!-- HEADER -->
+  <header>
+    <div class="brand-logo" onclick="goToSlide(1)">
+      <span class="logo-main">Calvin Klein Free</span>
+    </div>
+
+    <div class="header-right">
+      <nav>
+        <a onclick="goToSlide(1)" class="active" id="nav-1">Overview</a>
+        <a onclick="goToSlide(2)" id="nav-2">Scent Profile</a>
+        <a onclick="goToSlide(3)" id="nav-3">Target Market</a>
+        <a onclick="goToSlide(4)" id="nav-4">All Products</a>
+        <a onclick="goToSlide(5)" id="nav-5">Contacts</a>
+      </nav>
+
+      <button class="theme-toggle-btn" id="themeToggleBtn" onclick="toggleTheme()">
+        <span id="themeIcon">🌙</span> 
+      </button>
+    </div>
+  </header>
+
+  <div class="progress-bar" id="progressBar"></div>
+
+  <!-- SLIDES CONTENT -->
+  <main>
+    
+    <!-- SLIDE 1: OVERVIEW PAGE -->
+    <section class="slide active" id="slide-1">
+      <div class="overview-hero">
+        <p class="hero-badge">ORGANIC SKINCARE MADE WITH REAL INGREDIENTS</p>
+        <h1 class="brand-title">Calvin Klein Free</h1>
+        <p class="hero-subtitle">
+          All Products, Costing, Mark Up, Suggested Retail Price (SRP), Profits per unit.
+        </p>
+        <button class="hero-cta-btn" onclick="goToSlide(4)">View all Products</button>
+      </div>
+
+      <!-- EXPLORE OUR PRODUCTS SECTION -->
+      <div class="explore-section">
+        <h2 class="section-title">Explore Our Formulations</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.8rem; font-size: 0.95rem;">
+          Featuring 22 botanical formulations spanning personal care, home scenting, and ambient mists.
+        </p>
+
+        <div class="grid-4">
+          <div class="product-img-card" onclick="openProductByKey('liquid body soap')">
+            <div class="card-img-placeholder" style="background-image: url('soap.jpg');"></div>
+            <div class="card-body">
+              <h3>Bath & Body</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Natural Soaps, Lotions, Scrubs & Bath Bombs.</p>
+            </div>
+          </div>
+
+          <div class="product-img-card" onclick="openProductByKey('hair shampoo')">
+            <div class="card-img-placeholder" style="background-image: url('1.jpg');"></div>
+            <div class="card-body">
+              <h3>Hair Care</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Organic Shampoos, Conditioners & Mists.</p>
+            </div>
+          </div>
+
+          <div class="product-img-card" onclick="openProductByKey('face mist hydrating')">
+            <div class="card-img-placeholder" style="background-image: url('faces.jpg');"></div>
+            <div class="card-body">
+              <h3>Facial Care</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Hydrating Mists, Serums & Sprays.</p>
+            </div>
+          </div>
+
+          <div class="product-img-card" onclick="openProductByKey('scented candle')">
+            <div class="card-img-placeholder" style="background-image: url('aroma.jpg');"></div>
+            <div class="card-body">
+              <h3>Aromatherapy & Home</h3>
+              <p style="color: var(--text-muted); font-size: 0.82rem;">Soy Candles, Essential Oils & Fine Fragrance.</p>
+            </div>
+          </div>
+        </div>
+
+        <button class="see-all-btn" onclick="goToSlide(4)">Browse All Products →</button>
+      </div>
+
+      <!-- RELATED POSTS SECTION -->
+      <div class="related-posts-section">
+        <h2 class="section-title">Related Post</h2>
+        <p style="text-align: center; color: var(--text-muted); margin-bottom: 1.8rem; font-size: 0.95rem;">
+          Expert guides on product usage, scent layering techniques, and botanical formulation science.
+        </p>
+        
+        <div class="grid-3">
+          <div class="post-card">
+            <div class="post-img" style="background-image: url('salt.jpg');"></div>
+            <div class="post-content">
+              <h3 class="post-title">The Art of Scent Layering: Body Soap, Lotion & Fine Fragrance</h3>
+              <p class="post-date">Posted on October 14, 2026</p>
+              <p class="post-desc">Maximize scent longevity by building a moisture foundation with our Liquid Body Soap and sealing in hydration with Body Lotion.</p>
+              <a href="https://www.google.com/search?q=fragrance+scent+layering+body+soap+lotion+perfume" target="_blank" class="read-post-link">Read article →</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <div class="post-img" style="background-image: url('https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?auto=format&fit=crop&w=600&q=80');"></div>
+            <div class="post-content">
+              <h3 class="post-title">Why Alcohol-Free Hair Mists Are Essential for Healthy Hair</h3>
+              <p class="post-date">Posted on August 22, 2026</p>
+              <p class="post-desc">Discover how our micro-emulsified Hair Mist keeps locks fresh and shiny without stripping natural moisture.</p>
+              <a href="https://www.google.com/search?q=alcohol+free+hair+mist+benefits+hair+fragrance" target="_blank" class="read-post-link">Read article →</a>
+            </div>
+          </div>
+
+          <div class="post-card">
+            <div class="post-img" style="background-image: url('https://images.unsplash.com/photo-1527799820374-dcf8d9d4a388?auto=format&fit=crop&w=600&q=80');"></div>
+            <div class="post-content">
+              <h3 class="post-title">Aromatherapy at Home: Soy Candles & Pure Essential Oil Diffusers</h3>
+              <p class="post-date">Posted on May 11, 2026</p>
+              <p class="post-desc">Transform your living space into a tranquil sanctuary using clean-burning Soy Wax Candles and pure Essential Oil blends.</p>
+              <a href="https://www.google.com/search?q=aromatherapy+soy+candles+essential+oil+diffusers" target="_blank" class="read-post-link">Read article →</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 2: SCENT PROFILE -->
+    <section class="slide" id="slide-2">
+      <h2>CK Free Scent Profile Analysis</h2>
+      <p class="subtitle">Woody Aromatic olfactive family optimized for multi-product stability across all 22 formats.</p>
+
+      <div class="grid-2">
+        <div>
+          <h3 style="margin-bottom: 0.5rem; font-size: 1.1rem; font-family: var(--font-serif);">Interactive Scent Pyramid (Click to Explore)</h3>
+          <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 1rem;">Click each layer to inspect volatility and botanical composition:</p>
+          
+          <div class="pyramid-container">
+            <div class="pyramid-level active" id="pyr-top" onclick="selectPyramid('top')">
+              <h4>🍋 Top Notes (High Volatility)</h4>
+              <p>Juniper Berries, Star Anise, Wormwood </p>
+            </div>
+            <div class="pyramid-level" id="pyr-heart" onclick="selectPyramid('heart')">
+              <h4>☕ Heart Notes (Medium Volatility)</h4>
+              <p>Suede, Coffee, Tobacco, Cascarilla </p>
+            </div>
+            <div class="pyramid-level" id="pyr-base" onclick="selectPyramid('base')">
+              <h4>🌲 Base Notes (Low Volatility / Fixative)</h4>
+              <p>Cedarwood, Oak, Patchouli </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="card" id="pyramid-detail-box" style="display: flex; flex-direction: column; justify-content: center;">
+          <h3 id="p-title" style="color: var(--accent-green); font-size: 1.4rem; margin-bottom: 0.8rem;">Top Notes: Immediate Fresh Impact</h3>
+          <p id="p-desc" style="color: var(--text-muted); line-height: 1.6; margin-bottom: 1rem;">
+            Provides immediate fresh, aromatic top impact. Highly volatile molecules ideal for hair mists, face mists, and room fresheners.
+          </p>
+          <div style="background: rgba(130, 163, 40, 0.1); border: 1px solid var(--border-color); padding: 0.75rem; border-radius: 8px;">
+            <strong style="font-size: 0.85rem;">Laboratory Note:</strong> <span id="p-lab" style="color: var(--text-muted); font-size: 0.85rem;">Evaporates within 15–30 minutes on skin; optimized for top notes in spray formats.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- SLIDE 3: TARGET MARKET -->
+    <section class="slide" id="slide-3">
+      <h2>Target Market</h2>
+      <p class="subtitle">Who Calvin Klein Free is made for &mdash; and which products speak to each of them.</p>
+
+      <div class="tm-overview">
+        <div class="tm-stat">
+          <span class="tm-stat-label">Core market</span>
+          <strong>Everyday scent lovers</strong>
+          <small>Adults who want a clean, woody-aromatic scent from head to toe.</small>
+        </div>
+        <div class="tm-stat">
+          <span class="tm-stat-label">Where we start</span>
+          <strong>Metro Manila &amp; nearby</strong>
+          <small>Home base: Caloocan City.</small>
+        </div>
+        <div class="tm-stat">
+          <span class="tm-stat-label">Price positioning</span>
+          <strong id="tm-price-range">&mdash;</strong>
+          <small>SRP across all 22 products &mdash; affordable everyday luxury.</small>
+        </div>
+      </div>
+
+      <div class="tm-main">
+        <div>
+          <h3 class="tm-side-title">Customer Segments</h3>
+          <p class="tm-side-hint">Click a segment to see who they are and what to offer them:</p>
+          <div class="tm-seg-list" id="tm-seg-list"></div>
+        </div>
+        <div class="card tm-detail" id="tm-detail"></div>
+      </div>
+    </section>
+
+    <!-- SLIDE 4: ALL 22 PRODUCTS CATEGORIZED LIST -->
+    <section class="slide" id="slide-4">
+      <h2>Calvin Klein Free Product Portfolio</h2>
+      <p class="subtitle">Click on ANY of the products below to view its formulation, costing, and specs.</p>
+
+      <div class="filter-bar-container">
+        <div class="search-box">
+          <span class="search-icon">
+            <svg viewBox="0 0 24 24" fill="none" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round">
+              <circle cx="11" cy="11" r="8"></circle>
+              <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+            </svg>
+          </span>
+          <input type="text" id="searchInput" class="search-input" placeholder="Search products (e.g., Mist, Soap, Candle)..." oninput="filterProducts()">
+        </div>
+
+        <div class="filter-tabs">
+          <button class="filter-btn active" onclick="filterCategory('all', this)">All </button>
+          <button class="filter-btn" onclick="filterCategory('bath', this)">Bath & Body</button>
+          <button class="filter-btn" onclick="filterCategory('hair', this)">Hair Care</button>
+          <button class="filter-btn" onclick="filterCategory('face', this)">Facial Care</button>
+          <button class="filter-btn" onclick="filterCategory('home', this)">Aromatherapy</button>
+        </div>
+      </div>
+
+      <div class="grid-4-col" id="productsGrid">
+        
+        <!-- BATH & BODY -->
+        <div class="category-column" data-cat="bath">
+          <div class="category-banner" style="background-image: url(bar.png);">
+            <h3>Bath & Body</h3>
+          </div>
+          <ul class="category-items">
+            <li data-name="liquid body soap" onclick="openProductByKey('liquid body soap')">Liquid Body Soap</li>
+            <li data-name="body soap bar" onclick="openProductByKey('body soap bar')">Body Soap Bar</li>
+            <li data-name="body lotion" onclick="openProductByKey('body lotion')">Body Lotion</li>
+            <li data-name="hand cream" onclick="openProductByKey('hand cream')">Hand Cream</li>
+            <li data-name="bath bomb" onclick="openProductByKey('bath bomb')">Bath Bomb</li>
+            <li data-name="body scrub" onclick="openProductByKey('body scrub')">Body Scrub</li>
+            <li data-name="hand sanitizer" onclick="openProductByKey('hand sanitizer')">Hand Sanitizer</li>
+            <li data-name="hand sanitizer (spray on)" onclick="openProductByKey('hand sanitizer (spray on)')">Hand Sanitizer (Spray On)</li>
+            <li data-name="hand soap" onclick="openProductByKey('hand soap')">Hand Soap</li>
+            <li data-name="feminine spray" onclick="openProductByKey('feminine spray')">Feminine Spray</li>
+            <li data-name="masculine wash" onclick="openProductByKey('masculine wash')">Masculine Wash</li>
+            <li data-name="roll on deodorant" onclick="openProductByKey('roll on deodorant')">Roll-On Deodorant</li>
+          </ul>
+        </div>
+
+        <!-- HAIR -->
+        <div class="category-column" data-cat="hair">
+          <div class="category-banner" style="background-image: url(hair.png);">
+            <h3>Hair</h3>
+          </div>
+          <ul class="category-items">
+            <li data-name="hair shampoo" onclick="openProductByKey('hair shampoo')">Hair Shampoo</li>
+            <li data-name="conditioner" onclick="openProductByKey('conditioner')">Conditioner</li>
+            <li data-name="hair mist" onclick="openProductByKey('hair mist')">Hair Mist</li>
+            <li data-name="dry shampoo powder" onclick="openProductByKey('dry shampoo powder')">Dry Shampoo Powder</li>
+          </ul>
+        </div>
+
+        <!-- FACIAL CARE -->
+        <div class="category-column" data-cat="face">
+          <div class="category-banner" style="background-image: url(mist.png);">
+            <h3>Facial Care</h3>
+          </div>
+          <ul class="category-items">
+            <li data-name="face mist hydrating" onclick="openProductByKey('face mist hydrating')">Face Mist - Hydrating</li>
+          </ul>
+        </div>
+
+        <!-- AROMATHERAPY -->
+        <div class="category-column" data-cat="home">
+          <div class="category-banner" style="background-image: url(oil.png);">
+            <h3>Aromatherapy</h3>
+          </div>
+          <ul class="category-items">
+            <li data-name="fine fragrance" onclick="openProductByKey('fine fragrance')">Fine Fragrance</li>
+            <li data-name="scented candle" onclick="openProductByKey('scented candle')">Scented Candle</li>
+            <li data-name="essential oil" onclick="openProductByKey('essential oil')">Essential Oil</li>
+            <li data-name="pillow mist room linen" onclick="openProductByKey('pillow mist room linen')">Pillow Mist</li>
+            <li data-name="essential air freshener car" onclick="openProductByKey('essential air freshener car')">Car Air Freshener</li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SLIDE 5: CONTACTS -->
+    <section class="slide" id="slide-5">
+
+      <!-- HERO -->
+      <div class="contact-hero">
+        <div class="contact-deco" aria-hidden="true">
+          <svg class="deco deco-anise-a" viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(50 50)"><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(0)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(45)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(90)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(135)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(180)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(225)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(270)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(315)"/><circle r="4"/></g></svg>
+          <svg class="deco deco-anise-b" viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(50 50)"><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(0)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(45)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(90)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(135)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(180)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(225)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(270)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(315)"/><circle r="4"/></g></svg>
+          <svg class="deco deco-sprig-a" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 92 C 38 64, 62 40, 92 10"/><path d="M12.0 88.0 l-9 -5"/><path d="M12.0 88.0 l5 -9"/><path d="M24.7 75.3 l-9 -5"/><path d="M24.7 75.3 l5 -9"/><path d="M37.3 62.7 l-9 -5"/><path d="M37.3 62.7 l5 -9"/><path d="M50.0 50.0 l-9 -5"/><path d="M50.0 50.0 l5 -9"/><path d="M62.7 37.3 l-9 -5"/><path d="M62.7 37.3 l5 -9"/><path d="M75.3 24.7 l-9 -5"/><path d="M75.3 24.7 l5 -9"/><path d="M88.0 12.0 l-9 -5"/><path d="M88.0 12.0 l5 -9"/></svg>
+          <svg class="deco deco-sprig-b" viewBox="0 0 100 100" aria-hidden="true"><path d="M10 92 C 38 64, 62 40, 92 10"/><path d="M12.0 88.0 l-9 -5"/><path d="M12.0 88.0 l5 -9"/><path d="M24.7 75.3 l-9 -5"/><path d="M24.7 75.3 l5 -9"/><path d="M37.3 62.7 l-9 -5"/><path d="M37.3 62.7 l5 -9"/><path d="M50.0 50.0 l-9 -5"/><path d="M50.0 50.0 l5 -9"/><path d="M62.7 37.3 l-9 -5"/><path d="M62.7 37.3 l5 -9"/><path d="M75.3 24.7 l-9 -5"/><path d="M75.3 24.7 l5 -9"/><path d="M88.0 12.0 l-9 -5"/><path d="M88.0 12.0 l5 -9"/></svg>
+          <span class="mist mist-1"></span><span class="mist mist-2"></span><span class="mist mist-3"></span>
+        </div>
+        <p class="hero-badge">GET IN TOUCH</p>
+        <h2 class="contact-title">Let&rsquo;s Talk <em>Scent</em></h2>
+        <p class="contact-lead">
+          Curious about a formulation, pricing, or a custom blend? Send us a note and let&rsquo;s create something that smells like you.
+        </p>
+        <div class="scent-strip" title="Calvin Klein Free &mdash; Woody Aromatic">
+          <span class="scent-chip"><b>Top</b> Juniper &middot; Star Anise</span>
+          <span class="scent-dot"></span>
+          <span class="scent-chip"><b>Heart</b> Suede &middot; Coffee</span>
+          <span class="scent-dot"></span>
+          <span class="scent-chip"><b>Base</b> Cedarwood &middot; Oak</span>
+        </div>
+      </div>
+
+      <!-- CHANNEL CARDS -->
+      <div class="channel-grid">
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg></div>
+          <span class="channel-label">Write to us</span>
+          <span class="channel-value">lab.formula@calvinklein.com</span>
+          <div class="channel-actions">
+            <a class="mini-btn primary" href="mailto:lab.formula@calvinklein.com">Send email</a>
+            <button class="mini-btn" type="button" onclick="copyText('lab.formula@calvinklein.com','Email')">Copy</button>
+          </div>
+        </div>
+
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg></div>
+          <span class="channel-label">Call or text</span>
+          <span class="channel-value">+63 917 123 4567</span>
+          <div class="channel-actions">
+            <a class="mini-btn primary" href="tel:+639171234567">Call now</a>
+            <button class="mini-btn" type="button" onclick="copyText('+63 917 123 4567','Number')">Copy</button>
+          </div>
+        </div>
+
+        <div class="channel-card">
+          <div class="channel-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg></div>
+          <span class="channel-label">Find our lab</span>
+          <span class="channel-value">124 Blk Bagumbong Greenfeilds, Caloocan City</span>
+          <div class="channel-actions">
+            <a class="mini-btn primary" href="https://www.google.com/maps/search/?api=1&amp;query=124+Blk+Bagumbong+Greenfeilds+Caloocan+City" target="_blank" rel="noopener">Open in Maps</a>
+            <button class="mini-btn" type="button" onclick="copyText('124 Blk Bagumbong Greenfeilds, Caloocan City','Address')">Copy</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- FORM + SCENT POSTCARD -->
+      <div class="contact-split">
+        <form class="contact-form card" id="inquiryForm" onsubmit="sendInquiry(event)">
+          <h3>Send us a scent note</h3>
+          <p class="form-hint">Pick a topic or write your own &mdash; it opens as an email to our lab.</p>
+
+          <div class="topic-chips" role="group" aria-label="Quick topics">
+            <button type="button" class="topic-chip" onclick="setTopic(this,'Pricing &amp; SRP','Hi! I would like to know more about your pricing and suggested retail price for ')">&#128176; Pricing &amp; SRP</button>
+            <button type="button" class="topic-chip" onclick="setTopic(this,'Wholesale / Reselling','Hello! I am interested in reselling. Can you share details about ')">&#128230; Reselling</button>
+            <button type="button" class="topic-chip" onclick="setTopic(this,'Custom scent','Hi! I would love a custom scent inspired by ')">&#129492; Custom scent</button>
+            <button type="button" class="topic-chip" onclick="setTopic(this,'Product inquiry','Hello! I have a question about your ')">&#127807; Product question</button>
+          </div>
+
+          <div class="form-row">
+            <label class="form-field">
+              <span>Your name</span>
+              <input class="form-input" type="text" id="cf-name" placeholder="Juan Dela Cruz" required>
+            </label>
+            <label class="form-field">
+              <span>Email or mobile</span>
+              <input class="form-input" type="text" id="cf-contact" placeholder="you@email.com / 09XX XXX XXXX" required>
+            </label>
+          </div>
+
+          <label class="form-field">
+            <span>Topic</span>
+            <select class="form-input" id="cf-topic">
+              <option>Product inquiry</option>
+              <option>Pricing &amp; SRP</option>
+              <option>Wholesale / Reselling</option>
+              <option>Custom scent</option>
+              <option>Something else</option>
+            </select>
+          </label>
+
+          <label class="form-field">
+            <span>Your message</span>
+            <textarea class="form-input" id="cf-message" rows="5" placeholder="Tell us what scent story you have in mind&hellip;" required></textarea>
+          </label>
+
+          <button type="submit" class="hero-cta-btn form-submit"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" style="width:16px;height:16px;vertical-align:-3px;margin-right:6px"><line x1="22" y1="2" x2="11" y2="13"/><polygon points="22 2 15 22 11 13 2 9 22 2"/></svg>Send message</button>
+        </form>
+
+        <aside class="scent-postcard">
+          <div class="postcard-stamp" aria-hidden="true"><svg class="deco stamp-anise" viewBox="0 0 100 100" aria-hidden="true"><g transform="translate(50 50)"><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(0)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(45)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(90)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(135)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(180)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(225)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(270)"/><ellipse cx="0" cy="-24" rx="8" ry="21" transform="rotate(315)"/><circle r="4"/></g></svg></div>
+          <p class="postcard-kicker">A note from the lab</p>
+          <h3 class="postcard-title">Calvin Klein Free</h3>
+          <p class="postcard-text">
+            Woody aromatic, made with real ingredients &mdash; from fine fragrance to bath bombs, one signature scent across all 22 products.
+          </p>
+
+          <ul class="postcard-notes">
+            <li><span>&#127819;</span><div><b>Top</b><small>Juniper Berries, Star Anise, Wormwood</small></div></li>
+            <li><span>&#9749;</span><div><b>Heart</b><small>Suede, Coffee, Tobacco, Cascarilla</small></div></li>
+            <li><span>&#127794;</span><div><b>Base</b><small>Cedarwood, Oak, Patchouli</small></div></li>
+          </ul>
+
+          <p class="postcard-kicker" style="margin-top:1.4rem;">Prefer to chat?</p>
+          <div class="postcard-chat">
+            <a href="viber://chat?number=%2B639171234567" class="social-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M19.38 4.62C17.41 2.65 14.78 1.57 12 1.57c-5.78 0-10.43 4.65-10.43 10.43 0 1.85.48 3.65 1.39 5.23L1.57 22.43l5.37-1.38c1.53.84 3.27 1.28 5.06 1.28 5.78 0 10.43-4.65 10.43-10.43 0-2.78-1.08-5.41-3.05-7.38zM12 20.73c-1.61 0-3.19-.43-4.57-1.25l-.33-.2-3.39.87.91-3.31-.22-.35c-.9-1.44-1.38-3.1-1.38-4.81 0-4.9 3.99-8.89 8.89-8.89 2.37 0 4.6 1.02 6.28 2.7 1.68 1.68 2.7 3.91 2.7 6.28 0 4.9-3.99 8.89-8.89 8.89z"/></svg> Viber</a>
+            <a href="https://wa.me/639171234567" target="_blank" rel="noopener" class="social-badge"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.98 9.98 0 004.779 1.221h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2z"/></svg> WhatsApp</a>
+          </div>
+          <p class="postcard-sign">&mdash; Calvin Klein Free Lab</p>
+        </aside>
+      </div>
+    </section>
+
+    <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  </main>
+
+  <!-- WEBSITE FOOTER -->
+  <footer class="site-footer">
+    <div class="footer-grid">
+      <div>
+        <div class="brand-logo" style="margin-bottom: 0.8rem;">
+          <span class="logo-main">Calvin Klein Free</span>
+          <span class="logo-sub">Organic Scent Collection</span>
+        </div>
+        <p style="color: var(--text-muted); font-size: 0.85rem; line-height: 1.6;">
+          Transforming raw laboratory fragrance oils into sustainable, organic commercial product collections.
+        </p>
+      </div>
+
+      <div class="footer-col">
+        <h4>Bath & Body</h4>
+        <ul class="footer-links">
+          <li><a onclick="openProductByKey('liquid body soap')">Liquid Body Soap</a></li>
+          <li><a onclick="openProductByKey('body lotion')">Body Lotion</a></li>
+          <li><a onclick="openProductByKey('body scrub')">Body Scrub</a></li>
+          <li><a onclick="openProductByKey('hand sanitizer (spray on)')">Hand Sanitizer (Spray On)</a></li>
+          <li><a onclick="openProductByKey('masculine wash')">Masculine Wash</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Hair & Face</h4>
+        <ul class="footer-links">
+          <li><a onclick="openProductByKey('hair shampoo')">Hair Shampoo</a></li>
+          <li><a onclick="openProductByKey('conditioner')">Conditioner</a></li>
+          <li><a onclick="openProductByKey('hair mist')">Hair Mist</a></li>
+          <li><a onclick="openProductByKey('face mist hydrating')">Hydrating Face Mist</a></li>
+          <li><a onclick="openProductByKey('fine fragrance')">Fine Fragrance</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-col">
+        <h4>Connect & Socials</h4>
+        <div style="display: flex; flex-direction: column; gap: 0.6rem;">
+          <a href="mailto:lab.formulation@calvinklein.com" class="social-badge">
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+              <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+              <polyline points="22,6 12,13 2,6"></polyline>
+            </svg>
+            Email Us
+          </a>
+          <a href="https://viber.com" target="_blank" class="social-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M19.38 4.62C17.41 2.65 14.78 1.57 12 1.57c-5.78 0-10.43 4.65-10.43 10.43 0 1.85.48 3.65 1.39 5.23L1.57 22.43l5.37-1.38c1.53.84 3.27 1.28 5.06 1.28 5.78 0 10.43-4.65 10.43-10.43 0-2.78-1.08-5.41-3.05-7.38zM12 20.73c-1.61 0-3.19-.43-4.57-1.25l-.33-.2-3.39.87.91-3.31-.22-.35c-.9-1.44-1.38-3.1-1.38-4.81 0-4.9 3.99-8.89 8.89-8.89 2.37 0 4.6 1.02 6.28 2.7 1.68 1.68 2.7 3.91 2.7 6.28 0 4.9-3.99 8.89-8.89 8.89z"/>
+            </svg>
+            Viber 
+          </a>
+          <a href="https://whatsapp.com" target="_blank" class="social-badge">
+            <svg viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12.012 2c-5.506 0-9.989 4.478-9.99 9.984a9.964 9.964 0 001.333 4.993L2 22l5.233-1.237a9.98 9.98 0 004.779 1.221h.004c5.505 0 9.988-4.478 9.989-9.984 0-2.669-1.038-5.176-2.925-7.062A9.925 9.925 0 0012.012 2z"/>
+            </svg>
+            WhatsApp
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <span>© 2026 Calvin Klein Free. All Rights Reserved.</span>
+      <span style="color: var(--accent-green); font-weight: 600;">Developed by Angel Mallillin</span>
+    </div>
+  </footer>
+
+  <!-- SLIDE CONTROLS BOTTOM BAR -->
+  <div class="slide-nav-bar">
+    <span id="slide-counter" style="color: var(--text-muted); font-weight: 600;">SLIDE 01 / 05</span>
+    <div>
+      <button class="nav-btn" onclick="prevSlide()">← Previous</button>
+      <button class="nav-btn primary" onclick="nextSlide()">Next →</button>
+    </div>
+  </div>
+
+  <!-- PRODUCT DETAIL MODAL -->
+  <div class="modal" id="productDetailModal">
+    <div class="modal-content-large">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <div>
+          <h2 id="mName" style="font-size: 1.8rem; margin-bottom: 0;">Product Name</h2>
+          <span style="color: var(--accent-green); font-size: 0.85rem; font-weight: 600;">CALVIN KLEIN FREE FORMULATION & COSTING SPEC</span>
+        </div>
+        <button onclick="closeDetailModal()" class="btn-icon" style="font-size: 1.2rem; padding: 0.3rem 0.8rem;">✕</button>
+      </div>
+
+      <div class="modal-body-grid">
+        <div>
+          <div id="mImg" class="modal-img-container"></div>
+          <div class="feature-pills" id="mPillsContainer"></div>
+          
+          <div class="detail-block">
+            <h4>What is this product for?</h4>
+            <p id="mWhatFor">Product use case details...</p>
+          </div>
+        </div>
+
+        <div>
+          <h4 style="margin-bottom: 0.8rem; font-size: 1rem; font-family: var(--font-serif);">Technical Specifications & Costing</h4>
+          <div id="mCostingContainer"></div>
+        </div>
+      </div>
+
+      <button class="nav-btn primary" style="width: 100%; margin-top: 1rem;" onclick="closeDetailModal()">Done & Close</button>
+    </div>
+  </div>
+
+  <!-- ARTICLE MODAL -->
+  <div class="modal" id="postDetailModal">
+    <div class="modal-content-large" style="max-width: 650px;">
+      <div style="display: flex; justify-content: space-between; align-items: center; margin-bottom: 0.5rem;">
+        <div>
+          <h2 id="pTitle" style="font-size: 1.5rem; margin-bottom: 0;">Article Title</h2>
+          <span id="pDate" style="color: var(--accent-green); font-size: 0.85rem; font-weight: 600;">Posted on Date</span>
+        </div>
+        <button onclick="closePostModal()" class="btn-icon" style="font-size: 1.2rem; padding: 0.3rem 0.8rem;">✕</button>
+      </div>
+
+      <div id="pImg" class="modal-img-container" style="margin: 1rem 0;"></div>
+      <div class="detail-block">
+        <p id="pDesc" style="font-size: 0.95rem; line-height: 1.6; white-space: pre-line;"></p>
+      </div>
+
+      <button class="nav-btn primary" style="width: 100%; margin-top: 1rem;" onclick="closePostModal()">Close Article</button>
+    </div>
+  </div>
+
+  <!-- JAVASCRIPT LOGIC -->
+  <script src="haha.js"></script>
+</body>
+</html>
